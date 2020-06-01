@@ -18,9 +18,14 @@ public class Dog {
         System.out.println(name + " barks...BARK!!!");   
         //A value is not returned
     }
-    //2.5 calling a Void Method with Parameters 
-    public void setName(String myName){
-        return myName;  
+    //2.4 calling a Void Method with Parameters 
+   public void setName(String myName){
+       name = myName;  
+    }
+    
+    //2.5 Calling a non-void method
+    public String getName() {
+     return name;   
     }
 
 }
