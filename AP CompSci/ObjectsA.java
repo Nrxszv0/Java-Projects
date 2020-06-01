@@ -1,18 +1,31 @@
-public class ObjectsA {
-    public static void main(String[] args) {
-        //2.2 Constructors, Parameters, and Overloading
-        Dog boo = new Dog("Boo");
-        Dog star = new Dog("Star");
-        /*2.3 Calling a void method
-         *A void method does not return a value
-         *A method can either receive or not receive a value
-         *A method can either return or not return a value
-         */
-        boo.bark();
-        star.bark();
-        
-        //2.4 Calling a void method with parameters
-        boo.setName("Boo Crothers");
-        
+public class Dog {
+    //2.1 Classes, Class, and Class Constructors
+    private String name = "";
+    private int age=0;   
+    //private: anywhere outside the class can't get to the variable directly
+    Dog () {
+        System.out.println("I am a dog."); // This method is the constructor
     }
+
+    Dog(String myName){
+        System.out.println("I am a dog.");
+        name = myName;
+        System.out.println("My name is " + name + ".");
+    }
+
+    //2.3 Calling a Void Method
+    public void bark() {
+        System.out.println(name + " barks...BARK!!!");   
+        //A value is not returned
+    }
+    //2.4 calling a Void Method with Parameters 
+   public void setName(String myName){
+       name = myName;  
+    }
+    
+    //2.5 Calling a non-void method
+    public String getName() {
+     return name;   
+    }
+
 }
