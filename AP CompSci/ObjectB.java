@@ -45,35 +45,50 @@ public class ObjectB {
         //String Comparisons
         System.out.println("fullName equals lastName: " + fullName.equals(lastName));
         System.out.println("fullName compareTo lastName: "+ fullName.compareTo(lastName));
+        //compareTo is used to compare where something is in alphabetical order
         //If it comes before in alphebetical order it will be - if it is the same it will be 0 if it is after it will be +
-        
+
         // Getting one letter from a string
         // Use substring(index. index + 1)
         System.out.println("fullName substring 6,7: " + fullName.substring(6,7));
         System.out.println("fullName substring 7,8: " + fullName.substring(7,8));
-        
+
         //2.8 Wrapper Classes: Integer and Double
         //Wrapper Classes == Classes that wrap around a primitive. Like an integer or double
-        
+
         Integer age = new Integer(15);
         Double height = new Double(65.5);
-        
+
         //int age =  15;
         //double height =  65.5;
-        
+
         //Get a value from a wrapper class
         System.out.println("age: " + age.intValue());
         System.out.println("height: " +height.doubleValue());
-        
+
         //MIN_VALUE AND MAX_VALUE
         System.out.println("Integer.MIN_VALUE: " + Integer.MIN_VALUE);
         System.out.println("Integer.MAX_VALUE: " + Integer.MAX_VALUE +"\n");
-        
+
         System.out.println("Double.MIN_VALUE: " + Double.MIN_VALUE);
         System.out.println("Double.MAX_VALUE: " + Double.MAX_VALUE);
-        
-        
-        
-        
+
+        //Autoboxing
+        System.out.println("age: " +age);
+        System.out.println("height: " +height);
+        // Java Autoboxes the values. You don't have to use the methods
+        Integer weight = 122;
+        Double bmi = 8.7;
+
+        //2.9 Math Class. It comes with Java and is a set of math functions
+        int x = -43;
+        double y = -4.3;
+        //Format for static methods == Library.function() Ex) Math.abs(x);
+        System.out.println("abs(x): " + Math.abs(x));
+        System.out.println("abs(y): " + Math.abs(y));
+        System.out.println("x squared: " +Math.pow(x, 2));
+        System.out.println("20 square root: " +Math.sqrt(20));
+        System.out.println("random: " +(int)(Math.random() * 100));
+
     }
 }
