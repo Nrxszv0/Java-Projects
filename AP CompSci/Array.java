@@ -83,9 +83,9 @@ public class Array {
             }
         }
         System.out.println("The max is " +max);
-        
+
         //Compute sum or average
-        double[] prices = {4.22, 43.99, 2.00, 3.53, 12.54, .45, 15.44};
+        double[] prices = {4.22, 43.99, 2.00, 3.53, 12.54, .45, 15.44, 49.9, 40.00};
         double sum = 0.0;
         double average = 0.0;
         for(double price: prices){
@@ -95,16 +95,103 @@ public class Array {
         average = sum/prices.length;
         System.out.println(average);
         System.out.println();
-        
+
         //Determine if element has a property
-        boolean isOverTen = false;
+        boolean isOverFifty = false;
         for(double price: prices) {
-            if(price > 9.999) {
-             isOverTen = true;   
+            if(price > 49.99) {
+                isOverFifty = true;   
             }
         }
-        System.out.println(isOverTen);
-                
+        if(isOverFifty)
+        {
+            System.out.println("There is an item over 49.99");
+        }
+        else {
+            System.out.println("Nothing is over 50");
+        }
+        System.out.println(isOverFifty);
+
+        //Determine if all elements have a property
+        boolean isUnderFifty = true;
+        for(double price: prices) {
+            if(price>=49.99) {
+                isUnderFifty = false;
+            }            
+        }
+        if(isUnderFifty) {
+            System.out.println("All Items are under 50");
+        }
+        else {
+            System.out.println("All items aren't under 50");
+        }
+
+        //Access all consecutive pairs of elements
+        String[] foods = {"Apple", "Strawberry", "Ham", "Orange", "Banana"};
+        for(int i =0; i<foods.length-1; i++) {
+            System.out.println(foods[i] + " " + foods[i+1]);
+        }
+        for(int i =0; i<foods.length-2; i++) {
+            System.out.println(foods[i] + " " + foods[i+2]);
+        }
+        System.out.println();
+
+        //Determine the presence or absence of duplicate elements
+        String[] superheroes = {"Batman", "Thor", "Iron Man", "Thor", "Super Man", "Spider Man"};
+        boolean areDuplicates = false;
+        for(int i = 0;i<superheroes.length; i++) {
+            for(int x = i+1; x<superheroes.length; x++) {
+                if(superheroes[i].equals(superheroes[x])){
+                    areDuplicates = true;
+                    break;
+                }
+            }
+        }
+        System.out.println("Are there duplicates?\n" + areDuplicates);
+
+        //Determine number of elements that meet a certain criteria
+        String genders[] = {"M", "F", "F", "M" ,"M", "F", "F", "F", "M"};
+        int femaleNum=0;
+        for(int i = 0; i<genders.length;i++) {
+            if(genders[i].equals("F")) {
+                femaleNum++;   
+            }
+        }                
+        System.out.println("femaleNum: " +femaleNum);
+
+        //Shifting array elements left. A similar patter used for right shift
+        String[] letters = {"B", "A", "L", "L"};
+        String tempLetter = letters[0];
+        for(int i = 1;i<letters.length;i++){
+            letters[i-1] = letters[i];   
+        }
+        letters[letters.length-1] = tempLetter;
+        for(String letter: letters) {
+            System.out.print(letter + ", ");   
+        }
+        System.out.println();
+
+        //Reverse the order of elements
+        String[] sNames={"Michael", "Jacob", "Gavin", "Ben", "Diego", "Steve", "Jake"};
+        String tempSName;
+        for(int i=0; i<sNames.length/2; i++) {
+            tempSName = sNames[i];
+            sNames[i] = sNames[sNames.length-i-1];
+            sNames[sNames.length-i-1] = tempSName;         
+        }
+        for(String sName: sNames) {
+            System.out.print(sName + ", ");
+        }
 
     }
 }
+
+
+
+
+
+
+
+
+
+
