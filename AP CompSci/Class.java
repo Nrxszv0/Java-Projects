@@ -5,8 +5,8 @@ public class Class {
       //Card
       //5.2 Constructors
       String name = new String("Bob Mould");
-      Card card = new Card("King", "S", 10);
-      Card card2 = new Card("Queen", "H", 11);
+      Card card = new Card("K", "S", 10);
+      Card card2 = new Card("Q", "H", 11);
       
       //5.3 Document your code with comments
       //5.4 Accessor Methods- allows you to get a value from an object - Getters
@@ -17,10 +17,25 @@ public class Class {
       
       //5.5 Mutator Methods - Setters
       // Dont do this:card.suit = "D"; 
-      card.setName("Ace");
+      card.setName("A");
       card.setSuit("S");
       card.setValue(1);
       
-     
+      System.out.println(card);
+      // 5.6 Writing Methods
+      card.printCard();
+      
+      // 5.7 Static Method: Not attached to objects of class, is attached to class itself
+      //Lets us make functions that aren't attached to an object
+      Card.printCard("A", "S");
+      Card.printCard("J", "H");
+      
+      // 5.8 Scope and access
+    // Doesn't work because name is private, you have to use an accessor method. System.out.println(card.name);
+    System.out.println(card.getName());
+    //Access = What can be accessed
+    //Scope ~ where something exists.
+    //System.out.println("x: " +card.x);
+    
     }
 } 
