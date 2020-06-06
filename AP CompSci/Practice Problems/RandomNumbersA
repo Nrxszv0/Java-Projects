@@ -1,0 +1,8 @@
+public class RandomNum {
+ public static void main(String[] args) {
+     String[] names = {"Michael", "Jacob", "Gavin", "Ben"};     
+     int rNum = (int)(Math.random() * names.length);
+     String randName = names[rNum];
+     System.out.println(randName);
+    }
+}
