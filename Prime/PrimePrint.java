@@ -15,11 +15,7 @@ public class PrimePrint {
         for(int i = 2; i<num;i++) {
         if((num / i) == ((int)(num/i))) {
              isPrime = false;
-        }   
-        /*if((num / i) != ((int)(num/i))) {
-             isPrime = true;
-        } */      
-        
+        }         
     }
         if(isPrime == true) {
             System.out.println((int)num +" is a prime number");
